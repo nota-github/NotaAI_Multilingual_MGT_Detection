@@ -18,9 +18,6 @@ class LLMFeatureExtractor:
         self.models = models
         self.tokenizers = tokenizers
 
-        # warm up
-        self.feature_extract("this is a sentence for warm up.")
-
     def feature_extract(self, input_text):
         features = []
         for model, tokenizer in zip(self.models, self.tokenizers):

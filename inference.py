@@ -31,7 +31,7 @@ def get_models():
     )
     unseen_language_detection_model = unseen_language_detection_model.eval().to("cuda")
     seen_language_detection_model = AutoModelForSequenceClassification.from_pretrained(
-        "multilingual-e5-large-MGT-2",
+        "nota-ai/multilingual-e5-large-MGT-finetuned",
         device_map="auto",
     ).eval()
 
